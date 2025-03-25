@@ -1,0 +1,7 @@
+<library path="lib/libdepth_obstacle_detect_ros_nodelet">
+    <class name="obstacle_detect/Obstacle_Detect" type="obstacle_detect::ObstacleDetect" base_class_type="nodelet::Nodelet">
+        <description>
+            This Nodelet runs the obstacle detect node, takes in depth images and outputs the obstacles detected in the image.
+        </description>
+    </class>
+</library>

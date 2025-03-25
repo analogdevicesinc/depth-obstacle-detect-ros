@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="nodelet" type="nodelet" name="manager" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="obstacle_detect" args="load obstacle_detect/Obstacle_Detect manager --no-bond" output="screen">
+        <param name="depth_topic" type="string" value="/cam1/depth_image"/>
+        <param name="camera_info_topic" type="string" value="/cam1/camera_info"/>
+        <param name="detect_topic" type="string" value="/cam1/detect"/>
+        <param name="obstacle_state_topic" type="string" value="/cam1/obstacle_state"/>
+        <param name="obstacle_range_limit" type="double" value="1.0" />
+        <param name="width_regions" type="int" value="12"/>
+        <param name="height_regions" type="int" value="9"/>
+        <param name="verbose" type="bool" value="false"/>
+        <param name="cam_id" type="string" value="cam1"/>
+    </node>
+</launch>
