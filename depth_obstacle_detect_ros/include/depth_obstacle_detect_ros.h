@@ -11,7 +11,7 @@
 #include <opencv2/contrib/contrib.hpp>
 #endif
 
-#include <depth_obstacle_detect_ros_msg/ObstacleStampedArray.h>
+#include <depth_obstacle_detect_ros_msgs/ObstacleStampedArray.h>
 #include "std_msgs/Bool.h"
 #include "std_msgs/Float64.h"
 
@@ -51,7 +51,7 @@ private:
   bool verbose_;
   bool is32FC1_;
   bool init_distance_conversion_;
-  depth_obstacle_detect_ros_msg::ObstacleStampedArray msg_obstacle_;
+  depth_obstacle_detect_ros_msgs::ObstacleStampedArray msg_obstacle_;
   std_msgs::Header msg_header_obstacle_;
   bool obstacle_detected_;
   double obstacle_detected_range_;
