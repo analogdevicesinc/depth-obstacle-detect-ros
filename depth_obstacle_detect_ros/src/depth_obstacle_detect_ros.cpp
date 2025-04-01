@@ -40,7 +40,7 @@ void DepthObstacleDetect::init()
   sub_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
       camera_info_topic_, 10, std::bind(&DepthObstacleDetect::infoCallback, this, std::placeholders::_1));
   pub_detect_ = it.advertise(detect_topic_, 1);
-  pub_obstacle_ = create_publisher<depth_obstacle_detect_ros_msg::msg::ObstacleStampedArray>(obstacle_state_topic_, 1);
+  pub_obstacle_ = create_publisher<depth_obstacle_detect_ros_msgs::msg::ObstacleStampedArray>(obstacle_state_topic_, 1);
 
   msg_header_detect_.frame_id = cam_id_;
   msg_header_detect_.stamp = this->get_clock()->now();
