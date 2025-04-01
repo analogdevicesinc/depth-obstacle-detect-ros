@@ -25,7 +25,7 @@ find_package(rclcpp_components REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(depth_obstacle_detect_ros_msg REQUIRED)
+find_package(depth_obstacle_detect_ros_msgs REQUIRED)
 
 find_package(OpenCV)
 if(OPENCV_FOUND OR
@@ -46,7 +46,7 @@ include_directories(include PUBLIC)
 add_library(depth_obstacle_detect src/depth_obstacle_detect_ros.cpp)
 
 add_executable(${PROJECT_NAME}_node src/depth_obstacle_detect_ros_node.cpp)
-ament_target_dependencies(depth_obstacle_detect rclcpp image_transport cv_bridge sensor_msgs rclpy depth_obstacle_detect_ros_msg)
+ament_target_dependencies(depth_obstacle_detect rclcpp image_transport cv_bridge sensor_msgs rclpy depth_obstacle_detect_ros_msgs)
 target_link_libraries(${PROJECT_NAME}_node depth_obstacle_detect ${OpenCV_LIBS} )
 
 add_library(${PROJECT_NAME}_component SHARED src/depth_obstacle_detect_ros_component.cpp)

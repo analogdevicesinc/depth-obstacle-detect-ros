@@ -15,7 +15,7 @@
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
-  <depend>depth_obstacle_detect_ros_msg</depend>
+  <depend>depth_obstacle_detect_ros_msgs</depend>
   <depend>rclcpp_components</depend>
   <exec_depend>ros2launch</exec_depend>
 

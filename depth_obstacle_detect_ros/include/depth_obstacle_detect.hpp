@@ -15,7 +15,7 @@
 #include <opencv2/contrib/contrib.hpp>
 #endif
 
-#include "depth_obstacle_detect_ros_msg/msg/obstacle_stamped_array.hpp"
+#include "depth_obstacle_detect_ros_msgs/msg/obstacle_stamped_array.hpp"
 #include "std_msgs/msg/bool.hpp"
 #include "std_msgs/msg/float64.hpp"
 
@@ -30,7 +30,7 @@ public:
 private:
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr sub_info_;
-  rclcpp::Publisher<depth_obstacle_detect_ros_msg::msg::ObstacleStampedArray>::SharedPtr pub_obstacle_;
+  rclcpp::Publisher<depth_obstacle_detect_ros_msgs::msg::ObstacleStampedArray>::SharedPtr pub_obstacle_;
   image_transport::Subscriber sub_depth_;
   image_transport::Publisher pub_detect_;
   sensor_msgs::msg::CameraInfo cam_info_detect_;
@@ -61,7 +61,7 @@ private:
   bool verbose_;
   bool is32FC1_;
   bool init_distance_conversion_;
-  depth_obstacle_detect_ros_msg::msg::ObstacleStampedArray msg_obstacle_;
+  depth_obstacle_detect_ros_msgs::msg::ObstacleStampedArray msg_obstacle_;
   std_msgs::msg::Header msg_header_obstacle_;
   bool obstacle_detected_;
   double obstacle_detected_range_;
