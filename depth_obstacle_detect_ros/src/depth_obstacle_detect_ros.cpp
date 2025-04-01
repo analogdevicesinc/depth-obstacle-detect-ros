@@ -26,7 +26,7 @@ DepthObstacleDetect::DepthObstacleDetect(ros::NodeHandle& node) : nh_(node)
   sub_depth_ = it.subscribe(depth_topic, 1, &DepthObstacleDetect::imageCallback, this);
   sub_info_ = nh_.subscribe(camera_info_topic, 1, &DepthObstacleDetect::infoCallback, this);
   pub_detect_ = it.advertise(detect_topic, 1);
-  pub_obstacle_ = nh_.advertise<depth_obstacle_detect_ros_msg::ObstacleStampedArray>(obstacle_state_topic, 1);
+  pub_obstacle_ = nh_.advertise<depth_obstacle_detect_ros_msgs::ObstacleStampedArray>(obstacle_state_topic, 1);
 
   msg_header_detect_.frame_id = cam_id;
   msg_header_detect_.stamp = ros::Time::now();

@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   sensor_msgs
   camera_info_manager
-  depth_obstacle_detect_ros_msg
+  depth_obstacle_detect_ros_msgs
 )
 
 FIND_PACKAGE(Boost)
