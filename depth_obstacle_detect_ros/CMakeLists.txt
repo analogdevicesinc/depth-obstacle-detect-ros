@@ -10,11 +10,13 @@ endif()
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 if(NOT DEFINED ENV{ROS_DISTRO})
-    message(FATAL_ERROR "ROS_DISTRO is not set. Please source your ROS environment.")
+    message(STATUS "ROS_DISTRO is not set. Please source your ROS environment. Defaulting to jazzy.")
+    set(ENV{ROS_DISTRO} jazzy)
 endif()
 
 set(ROS_DISTRO $ENV{ROS_DISTRO})
 if(NOT "${ROS_DISTRO}" STREQUAL "jazzy")
+  message(STATUS "Setting ROS_HUMBLE compile flags.")
   add_definitions(-DROS_HUMBLE)
 endif()
 
